@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GymWorkout - AdminDashboard</title>
+    <link rel="stylesheet" href="./styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+    <main>
+        <nav class="user-nav">
+            <ul>
+                <li>
+                    <button id="logoutBtnAdmin">Logout</button>
+                </li>
+            </ul>
+        </nav>
+        <article class="admin-dashboard-frame">
+            <aside class="sidebar">
+                <ul>
+                    <li>
+                        <a href="#adminhome" class="nav-link active">Admin Home</a>
+                    </li>
+                    <li>
+                        <a href="#admincreate" class="nav-link">Admin Creation</a>
+                    </li>
+                    <li>
+                        <a href="#userlist" class="nav-link">List of Users</a>
+                    </li>
+                    <!-- <li>
+                        <a href="#adminlist" class="nav-link">List of Admins</a>
+                    </li> -->
+                </ul>
+            </aside>
+            <aside class="main-content-area">
+                <div class="content" id="adminhome">
+                    <section class="adminhome">
+                        <section class="homeframe">
+                            <h1>Welcome To Your Admin Dashboard</h1>
+                            <p class="subheading">This is your central hub for overseeing all gym operations.</p>
+                            <ul class="admincard">
+                                <li>
+                                    <p>Total Enlisted Users</p>
+                                    <p>0</p>
+                                </li>
+                                <li>
+                                    <p>Total Authorized Admins</p>
+                                    <p>0</p>
+                                </li>
+                                <li>
+                                    <p>Total Messages</p>
+                                    <p>0</p>
+                                </li>
+                            </ul>
+                            <p class="subheading2">Below is the community message board where all messages submitted by users are displayed</p>
+                            <ul class="usermessages">
+                                <li>
+                                    <div class="contact-msg">
+                                        <p class="message">MESSAGE HERE</p>
+                                        <div class="reciept">
+                                        <i class="fullname">NAME</i>
+                                        <i class="email">EMAIL</i>
+                                        </div>
+
+                                    </div>
+                                </li>
+                            </ul>
+                        </section>
+                    </section>
+                </div>
+                <div class="content" id="admincreate">
+                    <section class="createframe">
+                        <section class="formframe">
+
+                            <form id="createAdminForm">
+                            <div class="sticker">
+                                CREATE A NEW ADMIN
+                            </div>
+                                <div class="img-inputs">
+                                    <!-- <aside class="img">
+                                        <img src="https://images.stockcake.com/public/c/1/a/c1a3febf-5421-4396-8814-668de424a8bf_large/intense-gym-workout-stockcake.jpg" alt="">
+                                    </aside> -->
+                                    <aside class="form-inputs">
+                                        <div class="user-form-first">
+                                            <input type="email" placeholder="Email Address" name="email">
+                                        </div>
+                                        <div class="user-form-first">
+                                            <input type="password" placeholder="Password" name="password">
+                                        </div>
+                                    </aside>
+                                </div>
+                                <button type="submit">Authorize New Admin</button>
+                            </form>
+                            <div id="adminCreateMessage"></div>
+                        </section>
+                    </section>
+                </div>
+                <div class="content" id="userlist">
+                    <section class="userlist">
+                        <section class="list">
+                            <div class="table-frame">
+                            <table id="adminuserstable">
+                                <thead>
+                                    <tr>
+                                        <th>Username</th>
+                                        <th>Full Name</th>
+                                        <th>Email Address</th>
+                                        <th>Date Joined</th>
+                                        <th>Gender</th>
+                                        <th>Country</th>
+                                        <th>Age</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>NONE</td>
+                                        <td>NONE</td>
+                                        <td>NONE</td>
+                                        <td>NONE</td>
+                                        <td>NONE</td>
+                                        <td>NONE</td>
+                                        <td>NONE</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                        </section>
+                    </section>
+                </div>
+                <!-- <div class="content" id="adminlist">
+                                        <section class="userlist">
+                        <section class="list">
+                            <div class="table-frame">
+                            <table>
+                                <thead>
+                                    <tr>
+                                        <th>Email Address</th>
+                                        <th>Date Created</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>NONE</td>
+                                        <td>NONE</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                        </section>
+                    </section>
+                </div> -->
+            </aside>
+        </article>
+    </main>
+    <script src="./logic.js"></script>
+</body>
+</html>

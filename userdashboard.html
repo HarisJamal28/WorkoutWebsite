@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GymWorkout - UserDashboard</title>
+    <link rel="stylesheet" href="./styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+    <main>
+        <nav class="user-nav">
+            <ul>
+                <li>
+                    <button id="logoutBtn">Logout</button>
+                </li>
+            </ul>
+        </nav>
+        <article class="user-dashboard-frame">
+            <aside class="sidebar">
+                <ul>
+                    <li>
+                        <a href="#myprofile" class="nav-link active">My Profile</a>
+                    </li>
+                    <li>
+                        <a href="#workouthistory" class="nav-link">My Workout History</a>
+                    </li>
+                    <li>
+                        <a href="#workoutstatistics" class="nav-link">Workout Statistics</a>
+                    </li>
+                    <li>
+                        <a href="#logworkout" class="nav-link">Log Workout</a>
+                    </li>
+                </ul>
+            </aside>
+            <aside class="main-content-area">
+                <div class="content" id="myprofile">
+                    <section class="userprofile">
+                        <div class="profile">
+                            <h1>Welcome to your personal gym dashboard!</h1>
+                            <div class="user-details">
+                                <aside class="img">
+                                    <img id="pfp" src="https://img.freepik.com/premium-photo/personal-trainer-motivates-woman-challenging-workout-gym_14117-716131.jpg" alt="User Profile Image">
+                                </aside>
+                                <aside class="details">
+                                    <form id="updateProfileForm">
+                                        <div class="user-form-first">
+                                            <input type="text" placeholder="First Name" name="firstName" autocomplete="off">
+                                            <input type="text" placeholder="Last Name" name="lastName" autocomplete="off">
+                                        </div>
+                                        <div class="user-form-first">
+                                            <input type="text" placeholder="Username" name="username" autocomplete="off">
+                                            <input type="email" placeholder="Email Address" name="email" autocomplete="off">
+                                        </div>
+                                        <div class="user-form-first">
+                                            <input type="date" placeholder="DD/MM/YYYY" name="dateOfBirth" autocomplete="off">
+                                            <input type="text" placeholder="Gender" name="gender" autocomplete="off">
+                                        </div>
+                                        <div class="user-form-first">
+                                            <input type="number" name="initialWeight" style="text-align: right;" autocomplete="off" min="20" max="300" placeholder="Weight (kg)">
+                                            <input type="number" name="height" style="text-align: right;" autocomplete="off" min="50" max="250" placeholder="Height (cm)">
+                                            <input type="number" placeholder="Age" name="age" style="text-align: right;" autocomplete="off">
+                                        </div>
+                                        <div class="user-form-first">
+                                            <input type="text" placeholder="Country" name="country" autocomplete="off">
+                                            <input type="text" placeholder="Province" name="province" autocomplete="off">
+                                            <input type="text" placeholder="City" name="city" autocomplete="off">
+                                        </div>
+                                        <button type="submit">UPDATE PROFILE</button>
+                                    </form>
+                                </aside>
+                            </div>
+                            <h3 style="text-align: center;">Here you can manage your profile details, set new goals, and keep track of your overall fitness journey.
+                            </h3>
+
+                            <div class="setgoal">
+                                <form id="goalForm">
+                                    <label for="goalInput">SET WEIGHT LOSS GOAL</label>
+                                    <input type="number" maxlength="3" name="goalInput">
+                                    <button class="sticker"><i class="fa-solid far fa-bookmark"></i></button>
+                                </form>
+                            </div>
+                        </div>
+                    </section>
+                </div>
+                <div class="content" id="workouthistory">
+                    <section class="history-frame">
+                        <div class="table-frame">
+                            <table>
+                                <thead>
+                                    <tr>
+                                        <th>Workout Type</th>
+                                        <th>Workout Date</th>
+                                        <th>Duration (Mins)</th>
+                                        <th>Calories Burnt </th>
+                                        <th>Exercises Performed</th>
+                                        <th>Sets/Reps</th>
+                                        <th>Weight Used (KG)</th>
+                                        <th>Notes/Comments</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <!-- <td>NONE</td>
+                                        <td>NONE</td>
+                                        <td>NONE</td>
+                                        <td>NONE</td>
+                                        <td>NONE</td>
+                                        <td>NONE</td>
+                                        <td>NONE</td>
+                                        <td>NONE</td> -->
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </section>
+                </div>
+                <div class="content" id="workoutstatistics">
+                    <div class="stats-frame">
+                        <div class="statistics">
+                            <div class="stats-cards">
+                                <img src="https://hips.hearstapps.com/hmg-prod/images/working-hard-for-healthy-body-royalty-free-image-1702999024.jpg?crop=0.66635xw:1xh;center,top&resize=640:*" alt="">
+                                <img src="https://uk.gymshark.com/_next/image?url=https%3A%2F%2Fimages.ctfassets.net%2F8urtyqugdt2l%2F7DjCv2aBaPIABZ9wosGvJk%2F0d693d9d04fae848feac8779289e2d3c%2Fmobile-leg-exercises.jpg&w=3840&q=85" alt="">
+                                <img src="https://images.ctfassets.net/8urtyqugdt2l/3PBiPbZfSBUTgbnuvuekCD/491b38fd1b37772178c5cab911465218/mobile-cbum-back-workout.jpg" alt="">
+                            </div>
+                            <div class="stats-cards">
+                                <img src="https://admin.wellandgood.com/wp-content/uploads/sites/3/2025/01/does-running-count-as-leg-day.jpg?w=500" alt="" style="object-fit: cover;">
+                                <img src="https://www.themanual.com/wp-content/uploads/sites/9/2021/11/push-ups-e1741032367440.jpg?fit=800%2C800&p=1" alt="" style="object-fit: cover;">
+                                <img src="https://shop.bodybuilding.com/cdn/shop/articles/leg-workouts-for-men-get-thicker-quads-glutes-and-hams-986493.jpg?v=1737673309" alt="" style="object-fit: cover;">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="content" id="logworkout">
+                    <div class="log-frame">
+                        <section class="logging-frame">
+                            <form id="logWorkoutForm">
+                                <div class="img-inputs">
+                                    <aside class="img">
+                                        <img src="https://images.stockcake.com/public/c/1/a/c1a3febf-5421-4396-8814-668de424a8bf_large/intense-gym-workout-stockcake.jpg" alt="">
+                                    </aside>
+                                    <aside class="form-inputs">
+                                        <div class="user-form-first">
+                                            <input type="text" placeholder="Workout Type" name="workoutType" autocomplete="off">
+                                        </div>
+                                        <div class="user-form-first">
+                                            <input type="text" placeholder="Workout Duration (Mins)" name="workoutDuration" autocomplete="off">
+                                        </div>
+                                        <div class="user-form-first">
+                                            <input type="text" placeholder="Calories Burnt" name="caloriesBurnt" autocomplete="off">
+                                        </div>
+                                    </aside>
+                                </div>
+                                <div class="img-inputs">
+                                    <aside class="img">
+                                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSVfk_loCZ-hn9pTYnhlKVWXOYwpZC9IQALDIOan-HFUdiWVb1YOmZFrWn_ywpfAHV1CiA&usqp=CAU" alt="">
+                                    </aside>
+                                    <aside class="form-inputs">
+                                        <div class="user-form-first">
+                                            <input type="text" placeholder="Exercises Performed" name="exercisesPerformed" autocomplete="off">
+                                        </div>
+                                        <div class="user-form-first">
+                                            <input type="text" placeholder="Sets/Repetitions" name="setsRepetitions" autocomplete="off">
+                                        </div>
+                                        <div class="user-form-first">
+                                            <input type="text" placeholder="Weight Used (KG)" name="weightUsed" autocomplete="off">
+                                        </div>
+                                    </aside>
+                                </div>
+                                <div class="img-inputs">
+                                    <aside class="img">
+                                        <img src="https://cdn.shopify.com/s/files/1/1633/7705/files/full_body_gym_workout_plan_for_women_480x480.jpg?v=1689684205" alt="">
+                                    </aside>
+                                    <aside class="form-inputs">
+                                        <div class="user-form-first">
+                                            <textarea name="" id="" placeholder="Notes/Comments" name="notes"></textarea>
+                                        </div>
+                                    </aside>
+                                </div>
+                                <button type="submit">LOG YOUR WORKOUT</button>
+                            </form>
+                        </section>
+                    </div>
+                </div>
+            </aside>
+        </article>
+    </main>
+    <script src="./logic.js"></script>
+</body>
+</html>

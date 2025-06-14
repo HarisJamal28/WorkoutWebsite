@@ -1,0 +1,1285 @@
+@import url("https://fonts.googleapis.com/css2?family=Anton+SC&family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap");
+* {
+  padding: 0;
+  margin: 0;
+  overflow-x: hidden;
+}
+
+body {
+  background-color: #1A1A1A;
+}
+
+main {
+  height: -moz-fit-content;
+  height: fit-content;
+  width: 100%;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  flex-direction: column;
+  position: relative;
+}
+main header {
+  width: 100%;
+  height: 30px;
+}
+main header nav {
+  width: 100%;
+  background-color: #A31F1F;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: row;
+  position: fixed;
+  top: 0;
+  z-index: 2;
+}
+main header nav ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+}
+main header nav ul:first-of-type li a {
+  font-size: 1.5rem;
+}
+main header nav ul li {
+  color: white;
+}
+main header nav ul li a {
+  display: block;
+  color: inherit;
+  padding: 1rem;
+  text-decoration: none;
+  font-family: "Anton SC", sans-serif;
+}
+main header nav ul li a:hover {
+  color: transparent; /* Make the text transparent so the background can show through */
+  background-color: #A31F1F; /* Or a background image/gradient for the "fill" */
+  -webkit-background-clip: text; /* Clip the background to the shape of the text (for WebKit browsers) */
+  background-clip: text; /* Standard property */
+  text-shadow: 1px 1px 0px rgba(0, 0, 0, 0.6);
+}
+main .social-media-list {
+  position: absolute;
+  left: 0;
+  top: 3rem;
+  background-color: #A31F1F;
+  color: white;
+}
+main .HeroBanner {
+  height: 65vh;
+  width: 100%;
+  position: relative;
+  overflow: hidden;
+}
+main .HeroBanner::-webkit-scrollbar {
+  display: none;
+}
+main .HeroBanner h1 {
+  position: absolute;
+  font-size: 4rem;
+  color: white;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 1;
+  font-family: "Anton SC", sans-serif;
+  text-shadow: 4px 4px 2px black;
+  font-weight: 100;
+}
+main .HeroBanner p {
+  position: absolute;
+  font-size: 2rem;
+  color: white;
+  top: 65%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 1;
+  font-family: "Anton SC", sans-serif;
+  text-shadow: 4px 4px 2px black;
+  font-weight: 100;
+}
+main .HeroBanner video {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  overflow: hidden;
+}
+main .home-container {
+  width: 100%;
+  height: 50vh;
+  display: flex;
+  flex-direction: row;
+  border-bottom: 1rem solid #A31F1F;
+}
+main .home-container:nth-of-type(even) {
+  flex-direction: row-reverse;
+}
+main .home-container:nth-of-type(even) .main-content .sticker {
+  right: -2.7rem;
+  top: 50%;
+  transform: translateY(-50%);
+}
+main .home-container:nth-of-type(even) .main-content .sticker i {
+  rotate: -45deg;
+}
+main .home-container:nth-of-type(odd) .main-content .sticker {
+  left: -2.7rem;
+  top: 50%;
+  transform: translateY(-50%);
+}
+main .home-container:nth-of-type(odd) .main-content .sticker i {
+  rotate: 45deg;
+}
+main .home-container:last-of-type {
+  border: 0 solid black;
+}
+main .home-container .sidebar {
+  display: flex;
+  flex-grow: 0.3;
+  background-color: #A31F1F;
+  min-width: 350px;
+}
+main .home-container .main-content {
+  display: flex;
+  flex-grow: 1;
+  background-color: black;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  position: relative;
+  overflow-x: visible;
+}
+main .home-container .main-content .sticker {
+  height: 6rem;
+  width: 6rem;
+  background-color: #A31F1F;
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 3rem;
+  overflow: hidden;
+  padding: 1rem;
+  border-radius: 90%;
+  border: 0.5rem solid white;
+}
+main .home-container .main-content .sticker i {
+  overflow: hidden;
+}
+main .home-container .main-content .text-content {
+  height: 90%;
+  width: 75%;
+}
+main .home-container .main-content .text-content h1 {
+  font-family: "Anton SC", sans-serif;
+  color: white;
+  font-weight: 100;
+  font-size: 2rem;
+  margin-top: 2rem;
+}
+main .home-container .main-content .text-content p {
+  color: white;
+  font-family: "Open Sans", sans-serif;
+  margin-top: 1rem;
+}
+main .about-frame {
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  flex-direction: column;
+}
+main .about-frame h1 {
+  font-family: "Anton SC", sans-serif;
+  color: white;
+  font-size: 4rem;
+  margin-top: 4rem;
+  font-weight: 100;
+  text-shadow: 4px 4px 0px black;
+}
+main .about-frame .about-cards {
+  width: 90%;
+  height: 400px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+  overflow: visible;
+  margin-top: 3rem;
+}
+main .about-frame .about-cards img {
+  height: 100%;
+  width: 50%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  border: 1rem solid #A31F1F;
+  box-shadow: 0px 10px 5px black;
+}
+main .contact-frame {
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  flex-direction: column;
+}
+main .contact-frame h1 {
+  font-family: "Anton SC", sans-serif;
+  color: white;
+  font-size: 4rem;
+  margin-top: 7rem;
+  font-weight: 100;
+  text-shadow: 4px 4px 0px black;
+  overflow: hidden;
+}
+main .contact-frame .contact-form-frame {
+  width: 50%;
+  height: 80%;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  flex-direction: column;
+}
+main .contact-frame .contact-form-frame form {
+  width: 90%;
+  height: -moz-fit-content;
+  height: fit-content;
+  display: flex;
+  flex-direction: row;
+  padding: 0.5rem;
+  position: relative;
+  overflow: visible;
+}
+main .contact-frame .contact-form-frame form button {
+  position: absolute;
+  width: 50%;
+  bottom: -3rem;
+  left: 50%;
+  transform: translateX(-50%);
+  padding: 0.5rem;
+  background-color: #A31F1F;
+  font-family: "Open Sans", sans-serif;
+  color: white;
+  border: 0px solid black;
+}
+main .contact-frame .contact-form-frame form button:hover {
+  cursor: pointer;
+}
+main .contact-frame .contact-form-frame form aside {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  flex-direction: column;
+}
+main .contact-frame .contact-form-frame form aside label {
+  color: white;
+  font-weight: 100;
+  font-family: "Anton SC", sans-serif;
+  font-size: 1rem;
+  margin: 0;
+  text-align: left;
+  width: 90%;
+}
+main .contact-frame .contact-form-frame form aside textarea {
+  width: 90%;
+  border: 0px solid black;
+  height: 150px;
+  resize: none;
+  margin-top: 0.5rem;
+}
+main .contact-frame .contact-form-frame form aside input {
+  width: 90%;
+  border: 1px solid black;
+  padding: 0.5rem;
+}
+main .login-frame {
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  flex-direction: column;
+}
+main .login-frame h1 {
+  font-family: "Anton SC", sans-serif;
+  color: white;
+  font-size: 4rem;
+  margin-top: 7rem;
+  font-weight: 100;
+  text-shadow: 4px 4px 0px black;
+  overflow: hidden;
+}
+main .login-frame .login-form-frame {
+  width: 50%;
+  height: 80%;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  flex-direction: column;
+}
+main .login-frame .login-form-frame span {
+  margin-top: 4rem;
+  color: white;
+  font-family: "Open Sans", sans-serif;
+}
+main .login-frame .login-form-frame span a {
+  color: #A31F1F;
+}
+main .login-frame .login-form-frame form {
+  width: 90%;
+  height: -moz-fit-content;
+  height: fit-content;
+  display: flex;
+  flex-direction: row;
+  padding: 0.5rem;
+  overflow: visible;
+  position: relative;
+}
+main .login-frame .login-form-frame form button {
+  position: absolute;
+  width: 50%;
+  bottom: -3rem;
+  left: 50%;
+  transform: translateX(-50%);
+  padding: 0.5rem;
+  background-color: #A31F1F;
+  font-family: "Open Sans", sans-serif;
+  color: white;
+  border: 0px solid black;
+}
+main .login-frame .login-form-frame form button:hover {
+  cursor: pointer;
+}
+main .login-frame .login-form-frame form aside {
+  height: -moz-fit-content;
+  height: fit-content;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  flex-direction: column;
+}
+main .login-frame .login-form-frame form aside label {
+  color: white;
+  font-weight: 100;
+  font-family: "Anton SC", sans-serif;
+  font-size: 1rem;
+  margin: 0;
+  text-align: left;
+  width: 50%;
+}
+main .login-frame .login-form-frame form aside input {
+  width: 50%;
+  border: 1px solid black;
+  padding: 0.5rem;
+}
+main .register-frame {
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  flex-direction: column;
+}
+main .register-frame h1 {
+  font-family: "Anton SC", sans-serif;
+  color: white;
+  font-size: 4rem;
+  margin-top: 7rem;
+  font-weight: 100;
+  text-shadow: 4px 4px 0px black;
+  overflow: hidden;
+}
+main .register-frame .register-form-frame {
+  width: 50%;
+  height: 80%;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  flex-direction: column;
+}
+main .register-frame .register-form-frame span {
+  margin-top: 4rem;
+  color: white;
+  font-family: "Open Sans", sans-serif;
+}
+main .register-frame .register-form-frame span a {
+  color: #A31F1F;
+}
+main .register-frame .register-form-frame form {
+  width: 90%;
+  height: -moz-fit-content;
+  height: fit-content;
+  display: flex;
+  flex-direction: row;
+  padding: 0.5rem;
+  overflow: visible;
+  position: relative;
+}
+main .register-frame .register-form-frame form button {
+  position: absolute;
+  width: 50%;
+  bottom: -3rem;
+  left: 50%;
+  transform: translateX(-50%);
+  padding: 0.5rem;
+  background-color: #A31F1F;
+  font-family: "Open Sans", sans-serif;
+  color: white;
+  border: 0px solid black;
+}
+main .register-frame .register-form-frame form button:hover {
+  cursor: pointer;
+}
+main .register-frame .register-form-frame form aside {
+  height: -moz-fit-content;
+  height: fit-content;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  flex-direction: column;
+}
+main .register-frame .register-form-frame form aside label {
+  color: white;
+  font-weight: 100;
+  font-family: "Anton SC", sans-serif;
+  font-size: 1rem;
+  margin: 0;
+  text-align: left;
+  width: 90%;
+}
+main .register-frame .register-form-frame form aside input {
+  width: 90%;
+  border: 1px solid black;
+  padding: 0.5rem;
+}
+main .user-nav {
+  width: 100%;
+  background-color: #A31F1F;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+main .user-nav button {
+  padding: 0.5rem;
+  font-family: "Anton SC", sans-serif;
+  font-size: 1.2rem;
+  color: white;
+  background-color: transparent;
+  border: transparent;
+}
+main .user-nav button:hover {
+  cursor: pointer;
+}
+main .user-dashboard-frame {
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+main .user-dashboard-frame .sidebar {
+  display: flex;
+  flex: 0.5;
+  background-color: black;
+  height: 100%;
+  width: 100%;
+}
+main .user-dashboard-frame .sidebar ul {
+  list-style: none;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  flex-direction: column;
+  width: 100%;
+  color: white;
+}
+main .user-dashboard-frame .sidebar ul li {
+  border-bottom: 1px solid white;
+  width: 100%;
+}
+main .user-dashboard-frame .sidebar ul li a {
+  display: block;
+  color: inherit;
+  padding: 1rem;
+  text-decoration: none;
+  font-family: "Anton SC", sans-serif;
+  font-weight: 100;
+  transition: background-color 0.5s ease-in-out;
+}
+main .user-dashboard-frame .sidebar ul li a:hover {
+  background-color: #A31F1F;
+}
+main .user-dashboard-frame .main-content-area {
+  display: block;
+  flex: 2;
+  height: 100%;
+  width: 100%;
+  overflow-y: hidden;
+}
+main .user-dashboard-frame .main-content-area .content {
+  width: 100%;
+  height: 100%;
+}
+main .user-dashboard-frame .main-content-area .content .userprofile {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  flex-direction: column;
+}
+main .user-dashboard-frame .main-content-area .content .userprofile .profile {
+  height: 90%;
+  width: 90%;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  flex-direction: column;
+}
+main .user-dashboard-frame .main-content-area .content .userprofile .profile h1 {
+  color: white;
+  font-family: "Anton SC", sans-serif;
+  font-size: 2rem;
+  font-weight: 100;
+  margin-top: 2rem;
+}
+main .user-dashboard-frame .main-content-area .content .userprofile .profile h3 {
+  color: white;
+  font-family: "Open Sans", sans-serif;
+  font-size: 1rem;
+  font-weight: 100;
+  margin-top: 2rem;
+}
+main .user-dashboard-frame .main-content-area .content .userprofile .profile .setgoal {
+  width: 50%;
+  height: 50px;
+  margin-top: 1rem;
+}
+main .user-dashboard-frame .main-content-area .content .userprofile .profile .setgoal form {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  width: 100%;
+}
+main .user-dashboard-frame .main-content-area .content .userprofile .profile .setgoal form label {
+  text-wrap: nowrap;
+  background-color: #A31F1F;
+  color: white;
+  font-family: "Anton SC", sans-serif;
+  font-weight: 100;
+  text-align: left;
+  padding: 0.5rem;
+  padding-left: 3rem;
+  padding-right: 3rem;
+  width: 100%;
+}
+main .user-dashboard-frame .main-content-area .content .userprofile .profile .setgoal form input {
+  width: 50px;
+  height: 100%;
+  padding: 0.6rem;
+  background-color: #1A1A1A;
+  border: 0.35rem solid black;
+  color: white;
+  font-family: "Open Sans", sans-serif;
+  text-align: right;
+  border: 0.3rem solid #A31F1F;
+}
+main .user-dashboard-frame .main-content-area .content .userprofile .profile .setgoal form button {
+  height: 100%;
+  width: 50px;
+  padding: 0.7rem;
+  background-color: #A31F1F;
+  color: white;
+  border: 0;
+}
+main .user-dashboard-frame .main-content-area .content .userprofile .profile .setgoal form button:hover {
+  cursor: pointer;
+}
+main .user-dashboard-frame .main-content-area .content .userprofile .profile .user-details {
+  width: 90%;
+  height: 400px;
+  margin-top: 2rem;
+  background-color: black;
+  box-shadow: 1rem 1rem 8px #0e0d0d;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+main .user-dashboard-frame .main-content-area .content .userprofile .profile .user-details .img {
+  height: 90%;
+  width: 30%;
+  padding: 1rem;
+  overflow: hidden;
+}
+main .user-dashboard-frame .main-content-area .content .userprofile .profile .user-details .img img {
+  height: 100%;
+  width: 100%;
+  -o-object-fit: fill;
+     object-fit: fill;
+  -o-object-position: center;
+     object-position: center;
+  border-radius: 1rem;
+}
+main .user-dashboard-frame .main-content-area .content .userprofile .profile .user-details .details {
+  display: flex;
+  flex: 1;
+  height: 100%;
+}
+main .user-dashboard-frame .main-content-area .content .userprofile .profile .user-details .details form {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  position: relative;
+}
+main .user-dashboard-frame .main-content-area .content .userprofile .profile .user-details .details form button {
+  position: absolute;
+  bottom: 1rem;
+  padding: 0.5rem;
+  background-color: #A31F1F;
+  font-family: "Anton SC", sans-serif;
+  color: white;
+  font-size: 1rem;
+  border: 0;
+  width: 80%;
+}
+main .user-dashboard-frame .main-content-area .content .userprofile .profile .user-details .details form button:hover {
+  cursor: pointer;
+}
+main .user-dashboard-frame .main-content-area .content .userprofile .profile .user-details .details form .user-form-first {
+  width: 90%;
+  margin-top: 1rem;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+}
+main .user-dashboard-frame .main-content-area .content .userprofile .profile .user-details .details form .user-form-first input {
+  width: 90%;
+  padding: 0.5rem;
+  border: 0.3rem solid #A31F1F;
+  background-color: #1A1A1A;
+  color: white;
+  font-family: "Open Sans", sans-serif;
+}
+main .user-dashboard-frame .main-content-area .content .userprofile .profile .user-details .details form .user-form-first input:focus {
+  outline: none;
+}
+main .user-dashboard-frame .main-content-area .content .history-frame {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  flex-direction: column;
+}
+main .user-dashboard-frame .main-content-area .content .history-frame .table-frame {
+  height: 90%;
+  width: 90%;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  flex-direction: column;
+}
+main .user-dashboard-frame .main-content-area .content .history-frame .table-frame table {
+  width: 100%;
+  background-color: black;
+  color: white;
+  margin-top: 2rem;
+}
+main .user-dashboard-frame .main-content-area .content .history-frame .table-frame table thead tr th {
+  padding: 1rem;
+  font-family: "Anton SC", sans-serif;
+  font-weight: 100;
+  border: 0.3rem solid #A31F1F;
+}
+main .user-dashboard-frame .main-content-area .content .history-frame .table-frame table thead tr th:nth-of-type(even) {
+  border-top: 0;
+  border-left: 0;
+}
+main .user-dashboard-frame .main-content-area .content .history-frame .table-frame table thead tr th:nth-of-type(odd) {
+  border-left: 0;
+  border-bottom: 0;
+}
+main .user-dashboard-frame .main-content-area .content .history-frame .table-frame table tbody tr td {
+  padding: 0.5rem;
+  font-family: "Anton SC", sans-serif;
+  font-weight: 100;
+  text-align: center;
+  background-color: #A31F1F;
+}
+main .user-dashboard-frame .main-content-area .content .log-frame {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+main .user-dashboard-frame .main-content-area .content .log-frame .logging-frame {
+  height: -moz-fit-content;
+  height: fit-content;
+  width: 90%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+main .user-dashboard-frame .main-content-area .content .log-frame .logging-frame form {
+  height: -moz-fit-content;
+  height: fit-content;
+  width: 50%;
+  background-color: black;
+  padding: 1rem;
+  font-family: "Open Sans", sans-serif;
+  display: flex;
+  flex-direction: column;
+  row-gap: 1.5rem;
+  box-shadow: 1rem 1rem 8px #0e0d0d;
+}
+main .user-dashboard-frame .main-content-area .content .log-frame .logging-frame form button {
+  padding: 0.5rem;
+  background-color: #A31F1F;
+  color: white;
+  font-family: "Anton SC", sans-serif;
+  font-weight: 100;
+  border: 0px;
+  width: 100%;
+}
+main .user-dashboard-frame .main-content-area .content .log-frame .logging-frame form .img-inputs {
+  width: 100%;
+  height: 200px;
+  display: flex;
+  flex-direction: row;
+  overflow: visible;
+}
+main .user-dashboard-frame .main-content-area .content .log-frame .logging-frame form .img-inputs .img {
+  height: 100%;
+  width: 50%;
+  overflow: hidden;
+  border: 0.25rem solid #A31F1F;
+}
+main .user-dashboard-frame .main-content-area .content .log-frame .logging-frame form .img-inputs .img img {
+  height: 100%;
+  width: 100%;
+  -o-object-fit: fit;
+     object-fit: fit;
+}
+main .user-dashboard-frame .main-content-area .content .log-frame .logging-frame form .img-inputs .form-inputs {
+  height: 100%;
+  width: 100%;
+}
+main .user-dashboard-frame .main-content-area .content .log-frame .logging-frame form .img-inputs:nth-of-type(2) {
+  display: flex;
+  flex-direction: row-reverse;
+}
+main .user-dashboard-frame .main-content-area .content .log-frame .logging-frame form label {
+  color: white;
+  font-family: "Anton SC", sans-serif;
+  margin-left: 2rem;
+}
+main .user-dashboard-frame .main-content-area .content .log-frame .logging-frame form .user-form-first {
+  width: 100%;
+  margin-top: 1rem;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+}
+main .user-dashboard-frame .main-content-area .content .log-frame .logging-frame form .user-form-first textarea {
+  border: 0.3rem solid #A31F1F;
+  width: 90%;
+  height: 150px;
+  background-color: #1A1A1A;
+  resize: none;
+  color: white;
+  font-family: "Open Sans", sans-serif;
+}
+main .user-dashboard-frame .main-content-area .content .log-frame .logging-frame form .user-form-first textarea:focus {
+  outline: none;
+}
+main .user-dashboard-frame .main-content-area .content .log-frame .logging-frame form .user-form-first input {
+  width: 80%;
+  padding: 0.5rem;
+  border: 0.3rem solid #A31F1F;
+  background-color: #1A1A1A;
+  color: white;
+}
+main .user-dashboard-frame .main-content-area .content .log-frame .logging-frame form .user-form-first input:focus {
+  outline: none;
+}
+main .user-dashboard-frame .main-content-area .content .stats-frame {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  flex-direction: column;
+}
+main .user-dashboard-frame .main-content-area .content .stats-frame .statistics {
+  height: 90%;
+  width: 90%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  row-gap: 2rem;
+}
+main .user-dashboard-frame .main-content-area .content .stats-frame .statistics .stats-cards {
+  width: 80%;
+  height: 40%;
+  overflow: visible;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+}
+main .user-dashboard-frame .main-content-area .content .stats-frame .statistics .stats-cards img {
+  height: 100%;
+  width: 100%;
+  -o-object-fit: fit;
+     object-fit: fit;
+  border: 0.3rem solid #A31F1F;
+  box-shadow: 0.5rem 0.5rem 8px #0e0d0d;
+}
+main .admin-dashboard-frame {
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+main .admin-dashboard-frame .sidebar {
+  display: flex;
+  flex: 0.5;
+  background-color: black;
+  height: 100%;
+  width: 100%;
+}
+main .admin-dashboard-frame .sidebar ul {
+  list-style: none;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  flex-direction: column;
+  width: 100%;
+  color: white;
+}
+main .admin-dashboard-frame .sidebar ul li {
+  border-bottom: 1px solid white;
+  width: 100%;
+}
+main .admin-dashboard-frame .sidebar ul li a {
+  display: block;
+  color: inherit;
+  padding: 1rem;
+  text-decoration: none;
+  font-family: "Anton SC", sans-serif;
+  font-weight: 100;
+  transition: background-color 0.5s ease-in-out;
+}
+main .admin-dashboard-frame .sidebar ul li a:hover {
+  background-color: #A31F1F;
+}
+main .admin-dashboard-frame .main-content-area {
+  display: block;
+  flex: 2;
+  height: 100%;
+  width: 100%;
+  overflow-y: hidden;
+}
+main .admin-dashboard-frame .main-content-area .content {
+  width: 100%;
+  height: 100%;
+}
+main .admin-dashboard-frame .main-content-area .content .adminhome {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  flex-direction: column;
+}
+main .admin-dashboard-frame .main-content-area .content .adminhome .homeframe {
+  height: 90%;
+  width: 90%;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  flex-direction: column;
+  row-gap: 2rem;
+}
+main .admin-dashboard-frame .main-content-area .content .adminhome .homeframe h1 {
+  color: white;
+  font-family: "Anton SC", sans-serif;
+  font-size: 2rem;
+  font-weight: 100;
+  margin-top: 2rem;
+}
+main .admin-dashboard-frame .main-content-area .content .adminhome .homeframe h3 {
+  color: white;
+  font-family: "Open Sans", sans-serif;
+  font-size: 1rem;
+  font-weight: 100;
+  margin-top: 2rem;
+}
+main .admin-dashboard-frame .main-content-area .content .adminhome .homeframe .subheading {
+  font-family: "Open Sans", sans-serif;
+  color: white;
+  font-size: 1rem;
+  margin: 0;
+}
+main .admin-dashboard-frame .main-content-area .content .adminhome .homeframe .subheading2 {
+  font-family: "Open Sans", sans-serif;
+  color: white;
+  font-size: 1rem;
+  margin: 0;
+  padding: 0;
+}
+main .admin-dashboard-frame .main-content-area .content .adminhome .homeframe .admincard {
+  width: 90%;
+  height: 200px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  list-style: none;
+}
+main .admin-dashboard-frame .main-content-area .content .adminhome .homeframe .admincard li {
+  background-color: black;
+  border: 0.4rem solid #A31F1F;
+  height: 100px;
+  width: 250px;
+  padding: 1rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  font-family: "Anton SC", sans-serif;
+  box-shadow: 0px 5px 5px black;
+}
+main .admin-dashboard-frame .main-content-area .content .adminhome .homeframe .admincard li p {
+  color: white;
+}
+main .admin-dashboard-frame .main-content-area .content .adminhome .homeframe .admincard li p:nth-of-type(2) {
+  font-size: 3rem;
+}
+main .admin-dashboard-frame .main-content-area .content .adminhome .homeframe .usermessages {
+  width: 80%;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  flex-direction: column;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  max-height: 200px;
+  padding-top: 1rem;
+  height: -moz-fit-content;
+  height: fit-content;
+  row-gap: 2rem;
+  scroll-behavior: smooth;
+}
+main .admin-dashboard-frame .main-content-area .content .adminhome .homeframe .usermessages::-webkit-scrollbar {
+  display: none;
+}
+main .admin-dashboard-frame .main-content-area .content .adminhome .homeframe .usermessages li {
+  color: white;
+  width: 100%;
+  overflow: visible;
+}
+main .admin-dashboard-frame .main-content-area .content .adminhome .homeframe .usermessages li .contact-msg {
+  height: 100%;
+  width: 100%;
+}
+main .admin-dashboard-frame .main-content-area .content .adminhome .homeframe .usermessages li .contact-msg .message {
+  color: white;
+  font-family: "Anton SC", sans-serif;
+  background-color: black;
+  padding: 10px;
+  font-size: 0.7rem;
+  border: 0.3rem solid #A31F1F;
+}
+main .admin-dashboard-frame .main-content-area .content .adminhome .homeframe .usermessages li .contact-msg .reciept {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  flex-direction: row;
+  gap: 1rem;
+  padding: 0.5rem;
+  background-color: #1A1A1A;
+}
+main .admin-dashboard-frame .main-content-area .content .adminhome .homeframe .usermessages li .contact-msg .reciept i {
+  background-color: #A31F1F;
+  padding: 5px;
+  width: 150px;
+  text-align: center;
+}
+main .admin-dashboard-frame .main-content-area .content .adminhome .homeframe .usermessages li .contact-msg .reciept .fullname {
+  color: white;
+  font-family: "Open Sans", sans-serif;
+  font-size: 0.6rem;
+}
+main .admin-dashboard-frame .main-content-area .content .adminhome .homeframe .usermessages li .contact-msg .reciept .email {
+  color: white;
+  font-family: "Open Sans", sans-serif;
+  font-size: 0.6rem;
+}
+main .admin-dashboard-frame .main-content-area .content .createframe {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  flex-direction: column;
+}
+main .admin-dashboard-frame .main-content-area .content .createframe .formframe {
+  height: 90%;
+  width: 90%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  row-gap: 2rem;
+  overflow: visible;
+}
+main .admin-dashboard-frame .main-content-area .content .createframe .formframe #adminCreateMessage {
+  font-family: "Anton SC", sans-serif;
+}
+main .admin-dashboard-frame .main-content-area .content .createframe .formframe form {
+  height: -moz-fit-content;
+  height: fit-content;
+  width: 50%;
+  background-color: black;
+  padding: 1rem;
+  font-family: "Open Sans", sans-serif;
+  display: flex;
+  flex-direction: column;
+  row-gap: 1.5rem;
+  box-shadow: 1rem 1rem 8px #0e0d0d;
+  overflow: visible;
+  position: relative;
+}
+main .admin-dashboard-frame .main-content-area .content .createframe .formframe form .sticker {
+  position: absolute;
+  top: 0;
+  background-color: #A31F1F;
+  color: white;
+  font-family: "Anton SC", sans-serif;
+  width: 100%;
+  left: 50%;
+  text-align: center;
+  transform: translate(-50%, -50%);
+}
+main .admin-dashboard-frame .main-content-area .content .createframe .formframe form button {
+  padding: 0.5rem;
+  background-color: #A31F1F;
+  color: white;
+  font-family: "Anton SC", sans-serif;
+  font-weight: 100;
+  border: 0px;
+  width: 100%;
+}
+main .admin-dashboard-frame .main-content-area .content .createframe .formframe form button:hover {
+  cursor: pointer;
+}
+main .admin-dashboard-frame .main-content-area .content .createframe .formframe form .img-inputs {
+  width: 100%;
+  height: 200px;
+  display: flex;
+  flex-direction: row;
+  overflow: visible;
+}
+main .admin-dashboard-frame .main-content-area .content .createframe .formframe form .img-inputs .img {
+  height: 100%;
+  width: 50%;
+  overflow: hidden;
+  border: 0.25rem solid #A31F1F;
+}
+main .admin-dashboard-frame .main-content-area .content .createframe .formframe form .img-inputs .img img {
+  height: 100%;
+  width: 100%;
+  -o-object-fit: fit;
+     object-fit: fit;
+}
+main .admin-dashboard-frame .main-content-area .content .createframe .formframe form .img-inputs .form-inputs {
+  height: 100%;
+  width: 100%;
+}
+main .admin-dashboard-frame .main-content-area .content .createframe .formframe form .img-inputs:nth-of-type(2) {
+  display: flex;
+  flex-direction: row-reverse;
+}
+main .admin-dashboard-frame .main-content-area .content .createframe .formframe form label {
+  color: white;
+  font-family: "Anton SC", sans-serif;
+  margin-left: 2rem;
+}
+main .admin-dashboard-frame .main-content-area .content .createframe .formframe form .user-form-first {
+  width: 100%;
+  margin-top: 1rem;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+}
+main .admin-dashboard-frame .main-content-area .content .createframe .formframe form .user-form-first textarea {
+  border: 0.3rem solid #A31F1F;
+  width: 90%;
+  height: 150px;
+  background-color: #1A1A1A;
+  resize: none;
+  color: white;
+  font-family: "Open Sans", sans-serif;
+}
+main .admin-dashboard-frame .main-content-area .content .createframe .formframe form .user-form-first textarea:focus {
+  outline: none;
+}
+main .admin-dashboard-frame .main-content-area .content .createframe .formframe form .user-form-first input {
+  width: 80%;
+  padding: 0.5rem;
+  border: 0.3rem solid #A31F1F;
+  background-color: #1A1A1A;
+  color: white;
+}
+main .admin-dashboard-frame .main-content-area .content .createframe .formframe form .user-form-first input:focus {
+  outline: none;
+}
+main .admin-dashboard-frame .main-content-area .content .userlist {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  flex-direction: column;
+}
+main .admin-dashboard-frame .main-content-area .content .userlist .list {
+  height: 90%;
+  width: 90%;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  flex-direction: column;
+}
+main .admin-dashboard-frame .main-content-area .content .userlist .list table {
+  width: 100%;
+  background-color: black;
+  color: white;
+  margin-top: 2rem;
+}
+main .admin-dashboard-frame .main-content-area .content .userlist .list table thead tr th {
+  padding: 1rem;
+  padding-left: 2rem;
+  padding-right: 2rem;
+  font-family: "Anton SC", sans-serif;
+  font-weight: 100;
+}
+main .admin-dashboard-frame .main-content-area .content .userlist .list table thead tr th:nth-of-type(even) {
+  border-top: 0;
+  border-left: 0;
+}
+main .admin-dashboard-frame .main-content-area .content .userlist .list table thead tr th:nth-of-type(odd) {
+  border-left: 0;
+  border-bottom: 0;
+}
+main .admin-dashboard-frame .main-content-area .content .userlist .list table tbody tr {
+  position: relative;
+}
+main .admin-dashboard-frame .main-content-area .content .userlist .list table tbody tr td {
+  padding: 0.5rem;
+  font-family: "Anton SC", sans-serif;
+  font-weight: 100;
+  text-align: center;
+  background-color: #A31F1F;
+}
+
+footer {
+  height: 50vh;
+  width: 100%;
+  background-color: #1A1A1A;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  flex-direction: column;
+}
+footer .footer-cards {
+  display: flex;
+  flex-direction: row;
+  flex-grow: 1;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  gap: 2rem;
+}
+footer .footer-cards li {
+  width: 450px;
+  background-color: #A31F1F;
+  height: 70%;
+}
+footer .footer-cards li:nth-of-type(3) div p {
+  font-size: 2rem;
+}
+footer .footer-cards li div {
+  display: flex;
+  flex-direction: column;
+}
+footer .footer-cards li div h1 {
+  color: white;
+  font-family: "Anton SC", sans-serif;
+  font-weight: 100;
+  width: 100%;
+  text-align: center;
+  margin-top: 1rem;
+}
+footer .footer-cards li div p {
+  color: white;
+  font-family: "Anton SC", sans-serif;
+  font-weight: 100;
+  font-size: 4rem;
+  width: 100%;
+  text-align: center;
+  margin-top: 1rem;
+}
+footer .footer-links {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 3rem;
+  padding: 1rem;
+  background-color: #A31F1F;
+}
+footer .footer-links li a {
+  text-decoration: none;
+  display: block;
+  color: white;
+  font-family: "Anton SC", sans-serif;
+}/*# sourceMappingURL=styles.css.map */
